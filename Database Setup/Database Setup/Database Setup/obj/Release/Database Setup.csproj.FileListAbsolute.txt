@@ -1,0 +1,10 @@
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\bin\Release\Database Setup.exe.config
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\bin\Release\Database Setup.exe
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\bin\Release\Database Setup.pdb
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Release\Database Setup.csprojResolveAssemblyReference.cache
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Release\Database_Setup.SetupCMWTRN.resources
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Release\Database_Setup.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Release\Database Setup.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Release\Database Setup.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Release\Database Setup.exe
+C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Release\Database Setup.pdb
