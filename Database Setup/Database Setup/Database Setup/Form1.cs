@@ -8,6 +8,8 @@ namespace Database_Setup
     public partial class SetupCMWTRN : Form
     {
         string fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Interface Sage/Save/DatabaseSetup.txt";
+        List<TextBox> TextBoxList = new List<TextBox>();
+        
 
         public SetupCMWTRN()
         {
@@ -23,26 +25,11 @@ namespace Database_Setup
         {
             List<string> linesToSave = new List<string>();
 
-            linesToSave.Add(UsernameTextBox.Lines.Length.ToString());
-            linesToSave.AddRange(UsernameTextBox.Lines);
-
-            linesToSave.Add(PasswordTextBox.Lines.Length.ToString());
-            linesToSave.AddRange(PasswordTextBox.Lines);
-
-            linesToSave.Add(DatabaseTextBox.Lines.Length.ToString());
-            linesToSave.AddRange(DatabaseTextBox.Lines);
-
-            linesToSave.Add(ShipmentTextBox.Lines.Length.ToString());
-            linesToSave.AddRange(ShipmentTextBox.Lines);
-
-            linesToSave.Add(SuccessTextBox.Lines.Length.ToString());
-            linesToSave.AddRange(SuccessTextBox.Lines);
-
-            linesToSave.Add(ErrorTextBox.Lines.Length.ToString());
-            linesToSave.AddRange(ErrorTextBox.Lines);
-
-            linesToSave.Add(LogErrorTextBox.Lines.Length.ToString());
-            linesToSave.AddRange(LogErrorTextBox.Lines);
+            foreach (TextBox Box in TextBoxList)
+            {
+                linesToSave.Add(Box.Lines.Length.ToString());
+                linesToSave.AddRange(Box.Lines);
+            }
 
             File.WriteAllLines(fileName, linesToSave);
             MessageBox.Show("Data Saved","Success");
@@ -50,53 +37,31 @@ namespace Database_Setup
 
         private void SetupCMWTRN_Load(object sender, EventArgs e)
         {
+            TextBoxList.Add(UsernameTextBox);
+            TextBoxList.Add(PasswordTextBox);
+            TextBoxList.Add(DatabaseTextBox);
+            TextBoxList.Add(ShipmentTextBox);
+            TextBoxList.Add(SuccessTextBox);
+            TextBoxList.Add(ErrorTextBox);
+            TextBoxList.Add(LogErrorTextBox);
+
             try
             {
                 string[] lines;
                 string[] loadedLines = File.ReadAllLines(fileName);
 
                 int index = 0;
+                int n;
 
-                int n = int.Parse(loadedLines[index]);
-                lines = new string[n];
-                Array.Copy(loadedLines, index + 1, lines, 0, n);
-                UsernameTextBox.Lines = lines;
+                foreach(TextBox Box in TextBoxList)
+                {
+                    n = int.Parse(loadedLines[index]);
+                    lines = new string[n];
+                    Array.Copy(loadedLines, index + 1, lines, 0, n);
+                    Box.Lines = lines;
 
-                index = index + 2;
-                n = int.Parse(loadedLines[index]);
-                lines = new string[n];
-                Array.Copy(loadedLines, index + 1, lines, 0, n);
-                PasswordTextBox.Lines = lines;
-
-                index = index + 2;
-                n = int.Parse(loadedLines[index]);
-                lines = new string[n];
-                Array.Copy(loadedLines, index + 1, lines, 0, n);
-                DatabaseTextBox.Lines = lines;
-
-                index = index + 2;
-                n = int.Parse(loadedLines[index]);
-                lines = new string[n];
-                Array.Copy(loadedLines, index + 1, lines, 0, n);
-                ShipmentTextBox.Lines = lines;
-
-                index = index + 2;
-                n = int.Parse(loadedLines[index]);
-                lines = new string[n];
-                Array.Copy(loadedLines, index + 1, lines, 0, n);
-                SuccessTextBox.Lines = lines;
-
-                index = index + 2;
-                n = int.Parse(loadedLines[index]);
-                lines = new string[n];
-                Array.Copy(loadedLines, index + 1, lines, 0, n);
-                ErrorTextBox.Lines = lines;
-
-                index = index + 2;
-                n = int.Parse(loadedLines[index]);
-                lines = new string[n];
-                Array.Copy(loadedLines, index + 1, lines, 0, n);
-                LogErrorTextBox.Lines = lines;
+                    index = index + 2;
+                }
             }
             catch(DirectoryNotFoundException ex)
             {

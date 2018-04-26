@@ -8,3 +8,13 @@ C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database 
 C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database Setup.csproj.CoreCompileInputs.cache
 C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database Setup.exe
 C:\Users\SupportIT\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database Setup.pdb
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\bin\Debug\Database Setup.exe.config
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\bin\Debug\Database Setup.exe
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\bin\Debug\Database Setup.pdb
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database Setup.csprojResolveAssemblyReference.cache
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database_Setup.SetupCMWTRN.resources
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database_Setup.Properties.Resources.resources
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database Setup.csproj.GenerateResource.cache
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database Setup.csproj.CoreCompileInputs.cache
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database Setup.exe
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup\Database Setup\Database Setup\obj\Debug\Database Setup.pdb
