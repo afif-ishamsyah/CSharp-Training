@@ -1,0 +1,9 @@
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup KL\Database Setup\Database Setup\bin\Debug\Database Setup KL.exe.config
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup KL\Database Setup\Database Setup\bin\Debug\Database Setup KL.exe
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup KL\Database Setup\Database Setup\bin\Debug\Database Setup KL.pdb
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup KL\Database Setup\Database Setup\obj\Debug\Database_Setup.SetupCMWTRN.resources
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup KL\Database Setup\Database Setup\obj\Debug\Database_Setup_KL.Properties.Resources.resources
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup KL\Database Setup\Database Setup\obj\Debug\Database Setup KL.csproj.GenerateResource.cache
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup KL\Database Setup\Database Setup\obj\Debug\Database Setup KL.csproj.CoreCompileInputs.cache
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup KL\Database Setup\Database Setup\obj\Debug\Database Setup KL.exe
+C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup KL\Database Setup\Database Setup\obj\Debug\Database Setup KL.pdb
