@@ -1,9 +1,0 @@
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup LE\Database Setup\Database Setup\bin\Release\Database Setup LE.exe.config
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup LE\Database Setup\Database Setup\bin\Release\Database Setup LE.exe
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup LE\Database Setup\Database Setup\bin\Release\Database Setup LE.pdb
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup LE\Database Setup\Database Setup\obj\Release\Database_Setup.SetupCMWTRN.resources
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup LE\Database Setup\Database Setup\obj\Release\Database_Setup_LE.Properties.Resources.resources
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup LE\Database Setup\Database Setup\obj\Release\Database Setup LE.csproj.GenerateResource.cache
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup LE\Database Setup\Database Setup\obj\Release\Database Setup LE.csproj.CoreCompileInputs.cache
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup LE\Database Setup\Database Setup\obj\Release\Database Setup LE.exe
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup LE\Database Setup\Database Setup\obj\Release\Database Setup LE.pdb

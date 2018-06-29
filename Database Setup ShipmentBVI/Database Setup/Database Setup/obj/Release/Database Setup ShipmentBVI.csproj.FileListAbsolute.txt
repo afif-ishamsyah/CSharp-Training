@@ -1,0 +1,9 @@
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentBVI\Database Setup\Database Setup\bin\Release\Database Setup ShipmentBVI.exe.config
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentBVI\Database Setup\Database Setup\bin\Release\Database Setup ShipmentBVI.exe
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentBVI\Database Setup\Database Setup\bin\Release\Database Setup ShipmentBVI.pdb
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentBVI\Database Setup\Database Setup\obj\Release\Database_Setup.SetupCMWTRN.resources
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentBVI\Database Setup\Database Setup\obj\Release\Database_Setup_ShipmentBVI.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentBVI\Database Setup\Database Setup\obj\Release\Database Setup ShipmentBVI.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentBVI\Database Setup\Database Setup\obj\Release\Database Setup ShipmentBVI.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentBVI\Database Setup\Database Setup\obj\Release\Database Setup ShipmentBVI.exe
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentBVI\Database Setup\Database Setup\obj\Release\Database Setup ShipmentBVI.pdb

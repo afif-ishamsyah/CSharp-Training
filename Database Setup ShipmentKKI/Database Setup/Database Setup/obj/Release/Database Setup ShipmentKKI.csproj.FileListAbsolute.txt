@@ -1,0 +1,10 @@
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\bin\Release\Database Setup ShipmentKKI.exe.config
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\bin\Release\Database Setup ShipmentKKI.exe
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\bin\Release\Database Setup ShipmentKKI.pdb
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\obj\Release\Database Setup ShipmentKKI.csprojAssemblyReference.cache
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\obj\Release\Database_Setup.SetupCMWTRN.resources
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\obj\Release\Database_Setup_ShipmentKKI.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\obj\Release\Database Setup ShipmentKKI.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\obj\Release\Database Setup ShipmentKKI.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\obj\Release\Database Setup ShipmentKKI.exe
+C:\Users\SupportIT\Documents\C# Training\Database Setup ShipmentKKI\Database Setup\Database Setup\obj\Release\Database Setup ShipmentKKI.pdb
