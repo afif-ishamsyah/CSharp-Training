@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InvoiceReportProgram", "InvoiceReportProgram\InvoiceReportProgram.vdproj", "{3FBC7399-DE54-4AD7-BEFA-5B56B0D20CCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceReport", "InvoiceReport\InvoiceReport.csproj", "{A4A71036-8BBA-4A18-8291-DBB520FD81BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FBC7399-DE54-4AD7-BEFA-5B56B0D20CCD}.Debug|Any CPU.ActiveCfg = Debug
+		{3FBC7399-DE54-4AD7-BEFA-5B56B0D20CCD}.Release|Any CPU.ActiveCfg = Release
+		{A4A71036-8BBA-4A18-8291-DBB520FD81BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A71036-8BBA-4A18-8291-DBB520FD81BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A71036-8BBA-4A18-8291-DBB520FD81BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A71036-8BBA-4A18-8291-DBB520FD81BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F61AD66-5627-4BCB-B6E7-D57F351D3CA6}
+	EndGlobalSection
+EndGlobal

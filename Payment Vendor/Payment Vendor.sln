@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment Vendor", "Payment Vendor\Payment Vendor.csproj", "{9A7CDB2A-92C7-4868-88B1-F4E274E93725}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Payment Vendor Program", "Payment Vendor Program\Payment Vendor Program.vdproj", "{53CF95F5-4D2A-46FE-A34B-9C1B48223801}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A7CDB2A-92C7-4868-88B1-F4E274E93725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A7CDB2A-92C7-4868-88B1-F4E274E93725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A7CDB2A-92C7-4868-88B1-F4E274E93725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A7CDB2A-92C7-4868-88B1-F4E274E93725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CF95F5-4D2A-46FE-A34B-9C1B48223801}.Debug|Any CPU.ActiveCfg = Debug
+		{53CF95F5-4D2A-46FE-A34B-9C1B48223801}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE10C069-3A1C-4B60-9769-2DB9988441B6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\Payment Vendor.exe.config
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\Payment Vendor.exe
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\Payment Vendor.pdb
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\ACCPAC.Advantage.dll
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\ACCPAC.Advantage.Server.dll
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\ACCPAC.Advantage.Server.RemotingManager.dll
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\ACCPAC.Advantage.Types.dll
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\stdole.dll
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Debug\Payment Vendor.csprojAssemblyReference.cache
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Debug\Payment_Vendor.PaymentVendorForm.resources
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Debug\Payment_Vendor.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Debug\Payment Vendor.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Debug\Payment Vendor.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Debug\Payment Vendor.csproj.CopyComplete
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Debug\Payment Vendor.exe
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Debug\Payment Vendor.pdb
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\FileHelpers.dll
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Debug\FileHelpers.xml

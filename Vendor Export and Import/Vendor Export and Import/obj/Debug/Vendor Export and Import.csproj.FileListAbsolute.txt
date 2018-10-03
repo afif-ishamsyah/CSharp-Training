@@ -1,0 +1,18 @@
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\bin\Debug\Vendor Export and Import.exe.config
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\bin\Debug\Vendor Export and Import.exe
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\bin\Debug\Vendor Export and Import.pdb
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Vendor Export and Import.csprojAssemblyReference.cache
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Vendor_Export_and_Import.VendorForm.resources
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Vendor_Export_and_Import.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Vendor Export and Import.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Vendor Export and Import.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Vendor Export and Import.exe
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Vendor Export and Import.pdb
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Interop.VBIDE.dll
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Vendor Export and Import.csproj.ResolveComReference.cache
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\bin\Debug\ACCPAC.Advantage.dll
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\bin\Debug\ACCPAC.Advantage.Server.dll
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\bin\Debug\ACCPAC.Advantage.Server.RemotingManager.dll
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\bin\Debug\ACCPAC.Advantage.Types.dll
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\bin\Debug\stdole.dll
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Debug\Vendor Export and Import.csproj.CopyComplete

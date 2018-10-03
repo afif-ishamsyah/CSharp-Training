@@ -1,0 +1,18 @@
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\bin\Debug\Customer Import.exe.config
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\bin\Debug\Customer Import.exe
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\bin\Debug\Customer Import.pdb
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\bin\Debug\ACCPAC.Advantage.dll
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\bin\Debug\ACCPAC.Advantage.Server.dll
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\bin\Debug\ACCPAC.Advantage.Server.RemotingManager.dll
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\bin\Debug\ACCPAC.Advantage.Types.dll
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\bin\Debug\stdole.dll
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Customer Import.csprojAssemblyReference.cache
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Interop.VBIDE.dll
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Customer Import.csproj.ResolveComReference.cache
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Customer_Import.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Customer Import.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Customer Import.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Customer Import.csproj.CopyComplete
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Customer Import.exe
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Customer Import.pdb
+C:\Users\SupportIT\Documents\C# Training\Customer Import\Customer Import\obj\Debug\Customer_Import.CustomerImport.resources
