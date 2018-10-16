@@ -1,0 +1,9 @@
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\bin\Release\Application Setup.exe.config
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\bin\Release\Application Setup.exe
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\bin\Release\Application Setup.pdb
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application_Setup.ApplicationSetup.resources
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application_Setup.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application Setup.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application Setup.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application Setup.exe
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application Setup.pdb

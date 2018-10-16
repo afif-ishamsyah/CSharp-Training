@@ -1,0 +1,10 @@
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\bin\Debug\Application Setup.exe.config
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\bin\Debug\Application Setup.exe
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\bin\Debug\Application Setup.pdb
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Debug\Application_Setup.ApplicationSetup.resources
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Debug\Application_Setup.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Debug\Application Setup.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Debug\Application Setup.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Debug\Application Setup.exe
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Debug\Application Setup.pdb
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Debug\Application Setup.csprojAssemblyReference.cache

@@ -1,9 +1,0 @@
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup BVI\Database Setup\Database Setup\bin\Release\Database Setup BVI.exe.config
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup BVI\Database Setup\Database Setup\bin\Release\Database Setup BVI.exe
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup BVI\Database Setup\Database Setup\bin\Release\Database Setup BVI.pdb
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup BVI\Database Setup\Database Setup\obj\Release\Database_Setup.SetupCMWTRN.resources
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup BVI\Database Setup\Database Setup\obj\Release\Database_Setup_BVI.Properties.Resources.resources
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup BVI\Database Setup\Database Setup\obj\Release\Database Setup BVI.csproj.GenerateResource.cache
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup BVI\Database Setup\Database Setup\obj\Release\Database Setup BVI.csproj.CoreCompileInputs.cache
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup BVI\Database Setup\Database Setup\obj\Release\Database Setup BVI.exe
-C:\Users\Afif Ishamsyah\Documents\C# Training\Database Setup BVI\Database Setup\Database Setup\obj\Release\Database Setup BVI.pdb

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipment Entry LE", "Shipment Entry LE\Shipment Entry LE.csproj", "{116B66D1-6D77-4025-9D68-AC526999989D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application Setup", "Application Setup\Application Setup.csproj", "{0588831B-319C-4AFF-845B-1D915AB0AC59}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Shipment Entry Program", "Shipment Entry Program\Shipment Entry Program.vdproj", "{93416741-F32C-42D7-B68F-CF3E64F811E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{116B66D1-6D77-4025-9D68-AC526999989D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116B66D1-6D77-4025-9D68-AC526999989D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116B66D1-6D77-4025-9D68-AC526999989D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116B66D1-6D77-4025-9D68-AC526999989D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0588831B-319C-4AFF-845B-1D915AB0AC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0588831B-319C-4AFF-845B-1D915AB0AC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0588831B-319C-4AFF-845B-1D915AB0AC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0588831B-319C-4AFF-845B-1D915AB0AC59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93416741-F32C-42D7-B68F-CF3E64F811E7}.Debug|Any CPU.ActiveCfg = Debug
+		{93416741-F32C-42D7-B68F-CF3E64F811E7}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {785D18F7-23BE-4536-9DFD-B1F18E21180E}
+	EndGlobalSection
+EndGlobal

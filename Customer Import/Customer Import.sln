@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer Import", "Customer Import\Customer Import.csproj", "{F950215C-12D4-4972-96ED-10239E541308}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Customer Import Program", "Customer Import Program\Customer Import Program.vdproj", "{834DA9A4-D76F-4DA8-B55D-8CC8FFE56B82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{F950215C-12D4-4972-96ED-10239E541308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F950215C-12D4-4972-96ED-10239E541308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F950215C-12D4-4972-96ED-10239E541308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{834DA9A4-D76F-4DA8-B55D-8CC8FFE56B82}.Debug|Any CPU.ActiveCfg = Debug
+		{834DA9A4-D76F-4DA8-B55D-8CC8FFE56B82}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

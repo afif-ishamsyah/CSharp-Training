@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -142,11 +143,19 @@ namespace Customer_Import
                 else
                 {
                     //If data not exist, insert customer data to Sage
+                    TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+                    string tempNameCust = (string)xlWorkSheet.Cells[27, 3].value;
+                    string nameCust = textInfo.ToTitleCase(tempNameCust.ToLower());
+                    string tempNameCust2 = (string)xlWorkSheet.Cells[29, 3].value;
+                    string nameCust2 = (tempNameCust2 == null) ? "" : textInfo.ToTitleCase(tempNameCust2.ToLower());
+
+
+
 
                     ARCUSTOMER1header.Init();
                     ARCUSTOMER1header.Fields.FieldByName("IDGRP").SetValue(xlWorkSheet.Cells[23, 8].value, false);
                     ARCUSTOMER1header.Fields.FieldByName("IDCUST").SetValue(IDCUST, false);
-                    ARCUSTOMER1header.Fields.FieldByName("NAMECUST").SetValue(xlWorkSheet.Cells[27, 3].value, false);
+                    ARCUSTOMER1header.Fields.FieldByName("NAMECUST").SetValue(nameCust, false);
                     ARCUSTOMER1header.Fields.FieldByName("TEXTSTRE1").SetValue(xlWorkSheet.Cells[31, 3].value, false);
                     ARCUSTOMER1header.Fields.FieldByName("TEXTSTRE2").SetValue(xlWorkSheet.Cells[33, 3].value, false);
                     ARCUSTOMER1header.Fields.FieldByName("TEXTSTRE3").SetValue(xlWorkSheet.Cells[35, 3].value, false);
@@ -165,7 +174,7 @@ namespace Customer_Import
                     ARCUSTOMER1header.Fields.FieldByName("IDACCTSET").SetValue(xlWorkSheet.Cells[50, 11].value, false);
 
                     ARCUSTOMER1detail.Fields.FieldByName("OPTFIELD").SetValue("CUSTNAME2", false);
-                    ARCUSTOMER1detail.Fields.FieldByName("VALIFTEXT").SetValue(xlWorkSheet.Cells[29, 3].value, false);
+                    ARCUSTOMER1detail.Fields.FieldByName("VALIFTEXT").SetValue(nameCust2, false);
                     ARCUSTOMER1detail.Insert();
 
                     ARCUSTOMER1header.Insert();
@@ -184,7 +193,7 @@ namespace Customer_Import
                     ARCUSTSHIP2header.Init();
                     ARCUSTSHIP2header.Fields.FieldByName("IDCUST").SetValue(IDCUST, false);
                     ARCUSTSHIP2header.Fields.FieldByName("IDCUSTSHPT").SetValue("NPWP", false);
-                    ARCUSTSHIP2header.Fields.FieldByName("NAMELOCN").SetValue(xlWorkSheet.Cells[27, 3].value, false);
+                    ARCUSTSHIP2header.Fields.FieldByName("NAMELOCN").SetValue(nameCust, false);
                     ARCUSTSHIP2header.Fields.FieldByName("TEXTSTRE1").SetValue(xlWorkSheet.Cells[58, 3].value, false);
                     ARCUSTSHIP2header.Fields.FieldByName("TEXTSTRE2").SetValue(xlWorkSheet.Cells[60, 3].value, false);
                     ARCUSTSHIP2header.Fields.FieldByName("TEXTSTRE3").SetValue(xlWorkSheet.Cells[62, 3].value, false);
@@ -195,7 +204,7 @@ namespace Customer_Import
                     ARCUSTSHIP2header.Fields.FieldByName("CODETERR").SetValue("0" + xlWorkSheet.Cells[68, 3].value, false);
 
                     ARCUSTSHIP2detailFields.Fields.FieldByName("OPTFIELD").SetValue("CUSTNAME2", false);
-                    ARCUSTSHIP2detailFields.Fields.FieldByName("VALIFTEXT").SetValue(xlWorkSheet.Cells[29, 3].value, false);
+                    ARCUSTSHIP2detailFields.Fields.FieldByName("VALIFTEXT").SetValue(nameCust2, false);
                     ARCUSTSHIP2detailFields.Insert();
 
                     ARCUSTSHIP2header.Insert();

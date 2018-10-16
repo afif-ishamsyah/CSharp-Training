@@ -1,0 +1,16 @@
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\bin\Debug\Shipment Entry LE.exe.config
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\bin\Debug\Shipment Entry LE.exe
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\bin\Debug\Shipment Entry LE.pdb
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\bin\Debug\ACCPAC.Advantage.dll
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\bin\Debug\ACCPAC.Advantage.Server.dll
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\bin\Debug\ACCPAC.Advantage.Server.RemotingManager.dll
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\bin\Debug\ACCPAC.Advantage.Types.dll
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\bin\Debug\stdole.dll
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\obj\Debug\Shipment Entry LE.csprojAssemblyReference.cache
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\obj\Debug\Shipment_Entry_LE.Form1.resources
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\obj\Debug\Shipment_Entry_LE.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\obj\Debug\Shipment Entry LE.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\obj\Debug\Shipment Entry LE.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\obj\Debug\Shipment Entry LE.csproj.CopyComplete
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\obj\Debug\Shipment Entry LE.exe
+C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Shipment Entry LE\obj\Debug\Shipment Entry LE.pdb
