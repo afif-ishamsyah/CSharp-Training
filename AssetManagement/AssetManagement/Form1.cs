@@ -14,15 +14,17 @@ namespace AssetManagement
     {
         private Session session;
         private DBLink mDBLinkCmpRW;
-        string username;
-        string password;
-        string database;
-        string fileLocation;
-        string successLocation;
-        string errorLocation;
-        string logErrorLocation;
-        string fullfilename;
-        string rawfilename;
+        private string username;
+        private string password;
+        private string database;
+        private string fullFileName;
+        private string rawFileName;
+        private string fileLocation;
+        private string fileExtension;
+        private FileInfo fileInfo;
+        private string successLocation;
+        private string errorLocation;
+        private string logErrorLocation;
         TextFieldParser tfp;
 
         public Form1()
@@ -47,13 +49,19 @@ namespace AssetManagement
 
                 foreach (string file in Directory.GetFiles(fileLocation))
                 {
-                    fullfilename = fileLocation + "/" + Path.GetFileName(file); //Get first file in the folder
-                    rawfilename = Path.GetFileName(file);
+                    fullFileName = fileLocation + "/" + Path.GetFileName(file); //Get first file in the folder
+                    rawFileName = Path.GetFileName(file);
+                    fileExtension = Path.GetExtension(file);
+                    fileInfo = new FileInfo(file);
 
-                    SendtoSage();
+                    //file must be a csv and not hidden
+                    if (!fileInfo.Attributes.HasFlag(FileAttributes.Hidden) && fileExtension == ".csv")
+                    {
+                        SendtoSage();
 
-                    //If Insert to Sage success, move file Completed Folder
-                    File.Move(fileLocation + "/" + rawfilename, successLocation + "/" + rawfilename);
+                        //If Insert to Sage success, move file Completed Folder
+                        File.Move(fileLocation + "/" + rawFileName, successLocation + "/" + rawFileName);
+                    }
                 }
             }
             catch (OleDbException) { Application.Exit(); } //Handle connection error in SendtoSage()
@@ -82,7 +90,7 @@ namespace AssetManagement
             {
                 Connect();
 
-                tfp = new TextFieldParser(fullfilename);
+                tfp = new TextFieldParser(fullFileName);
                 tfp.Delimiters = new string[] { "," };
                 tfp.TextFieldType = FieldType.Delimited;
 
@@ -104,21 +112,6 @@ namespace AssetManagement
                 AMACQASST1detail2.Compose(new[] { AMACQASST1detail1 });
                 AMACQASST1detail3.Compose(new[] { AMACQASST1detail1 });
 
-                ACCPAC.Advantage.View AMACQHEAD2header;
-                ACCPAC.Advantage.View AMACQHEAD2detail1;
-                ACCPAC.Advantage.View AMACQHEAD2detail2;
-                ACCPAC.Advantage.View AMACQHEAD2detail3;
-
-                AMACQHEAD2header = mDBLinkCmpRW.OpenView("AM0353");
-                AMACQHEAD2detail1 = mDBLinkCmpRW.OpenView("AM0354");
-                AMACQHEAD2detail2 = mDBLinkCmpRW.OpenView("AM0356");
-                AMACQHEAD2detail3 = mDBLinkCmpRW.OpenView("AM0355");
-
-                AMACQHEAD2header.Compose(new[] { null, AMACQHEAD2detail1, null, null, null });
-                AMACQHEAD2detail1.Compose(new[] { AMACQHEAD2header, AMACQHEAD2detail2, AMACQHEAD2detail3, null, null, null, null });
-                AMACQHEAD2detail2.Compose(new[] { AMACQHEAD2detail1 });
-                AMACQHEAD2detail3.Compose(new[] { AMACQHEAD2detail1 });
-
                 // Check if customer already exist
                 tfp.ReadLine(); //skip header
                 int numrow = 1;
@@ -129,39 +122,44 @@ namespace AssetManagement
 
                     if (numrow == 1)
                     {
-                        AMACQASST1batch.Init();                     
+                        AMACQASST1batch.Init();
+                        //AMACQASST1batch.RecordCreate(ViewRecordCreate.NoInsert);
                         AMACQASST1batch.Fields.FieldByName("BATDESC").SetValue(fields[0], false);
-                        AMACQASST1batch.Fields.FieldByName("TXTYPE").SetValue(fields[1], false);
+                        AMACQASST1batch.Fields.FieldByName("TXTYPE").SetValue(fields[1], false);                      
+                        AMACQASST1batch.Update();
+                        //AMACQASST1batch.Insert();
 
-                        AMACQHEAD2header.Init();
-                        AMACQHEAD2header.Fields.FieldByName("ACQENTRY").SetValue(1, false);
-                        AMACQHEAD2header.Fields.FieldByName("DEFTEMP").SetValue(fields[2], false);
-                        AMACQHEAD2header.Fields.FieldByName("TRANSDATE").SetValue(DateTime.ParseExact(fields[5].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture), false);
-                        AMACQHEAD2header.Fields.FieldByName("FISCPERD").SetValue(fields[7], false);
-                        AMACQHEAD2header.Fields.FieldByName("VENDOR").SetValue(fields[11], false);
-                        AMACQHEAD2header.Fields.FieldByName("RATETYPE").SetValue("TX", false);
-                        AMACQHEAD2header.Fields.FieldByName("AQUCODE").SetValue(fields[8], false);
-                        AMACQHEAD2header.Fields.FieldByName("APTYPE").SetValue(2, false);
-                        AMACQHEAD2header.Fields.FieldByName("ACCTID").SetValue(fields[14], false);
-                        AMACQHEAD2header.Fields.FieldByName("PONO").SetValue(fields[12], false);                      
+                        //AMACQASST1header.RecordCreate(ViewRecordCreate.Insert);
+                        AMACQASST1header.Init();
+                        AMACQASST1header.Fields.FieldByName("ACQENTRY").SetValue("1", false);
+                        AMACQASST1header.Fields.FieldByName("FISCY").SetValue(fields[6], false);
+                        AMACQASST1header.Fields.FieldByName("TRANSDATE").SetValue(DateTime.ParseExact(fields[5].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture), false);
+                        AMACQASST1header.Fields.FieldByName("FISCPERD").SetValue(fields[7], false);
+                        AMACQASST1header.Fields.FieldByName("VENDOR").SetValue(fields[11], false);
+                        AMACQASST1header.Fields.FieldByName("RATETYPE").SetValue("TX", false);
+                        AMACQASST1header.Fields.FieldByName("AQUCODE").SetValue(fields[8], false);
+                        AMACQASST1header.Fields.FieldByName("ACCTID").SetValue(fields[14], false);
+                        AMACQASST1header.Fields.FieldByName("PONO").SetValue(fields[12], false);
+                        AMACQASST1header.Fields.FieldByName("ENTRYDESC").SetValue(fields[3], false);
+                        AMACQASST1header.Fields.FieldByName("DOCNO").SetValue(fields[10], false);
                     }
-                    AMACQHEAD2detail1.RecordCreate(ViewRecordCreate.NoInsert);
-                    AMACQHEAD2detail1.Fields.FieldByName("ASSETNO").SetValue(fields[15], false);
-                    AMACQHEAD2detail1.Fields.FieldByName("ASSETDESC").SetValue(fields[16], false);
-                    AMACQHEAD2detail1.Fields.FieldByName("BKVALUE").SetValue(fields[28], false);
-                    AMACQHEAD2detail1.Fields.FieldByName("BKLTPERD").SetValue(fields[27], false);
-                    AMACQHEAD2detail1.Insert();
+                    AMACQASST1detail1.RecordCreate(ViewRecordCreate.NoInsert);
+                    AMACQASST1detail1.Fields.FieldByName("ASSETNO").SetValue(fields[15], false);
+                    AMACQASST1detail1.Fields.FieldByName("ASSETDESC").SetValue(fields[16], false);
+                    AMACQASST1detail1.Fields.FieldByName("BKVALUE").SetValue(fields[28], false);
+                    AMACQASST1detail1.Fields.FieldByName("BKLTPERD").SetValue(fields[27], false);
+                    AMACQASST1detail1.Fields.FieldByName("COSTCENT").SetValue(fields[21], false);
+                    AMACQASST1detail1.Fields.FieldByName("ACCSET").SetValue(fields[20], false);
+                    AMACQASST1detail1.Fields.FieldByName("BKMETHOD").SetValue(fields[22], false);
+                    AMACQASST1detail1.Fields.FieldByName("BKPERDID").SetValue(fields[23], false);
+                    AMACQASST1detail1.Fields.FieldByName("BKLIFE").SetValue(fields[24], false);
+                    AMACQASST1detail1.Insert();
 
-                    if (numrow == 1)
-                    {
-                        AMACQHEAD2header.Fields.FieldByName("ENTRYDESC").SetValue(fields[3], false);
-                        AMACQHEAD2header.Fields.FieldByName("DOCNO").SetValue(fields[10], false);
-
-                    }
                     numrow++;
                 }
-                AMACQHEAD2header.Insert();
-                AMACQASST1batch.Insert();
+                //AMACQHEAD2header.Read(false);
+                //AMACQHEAD2header.Update();
+                AMACQASST1header.Insert();
 
                 session.Dispose();
                 tfp.Dispose();
@@ -172,7 +170,7 @@ namespace AssetManagement
                 tfp.Dispose();
                 tfp.Close();
                 List<string> errors = new List<string>();
-                FileStream files = File.Create(logErrorLocation + "/" + rawfilename + ".txt");
+                FileStream files = File.Create(logErrorLocation + "/" + rawFileName + ".txt");
                 files.Close();
 
                 for (int k = 0; k <= session.Errors.Count - 1; k++)
@@ -183,8 +181,8 @@ namespace AssetManagement
                 string errorMessage = string.Join(" ", errors);
 
 
-                FileSystem.WriteAllText(logErrorLocation + "/" + rawfilename + ".txt", errorMessage, true);
-                File.Move(fileLocation + "/" + rawfilename, errorLocation + "/" + rawfilename);
+                FileSystem.WriteAllText(logErrorLocation + "/" + rawFileName + ".txt", errorMessage, true);
+                File.Move(fileLocation + "/" + rawFileName, errorLocation + "/" + rawFileName);
                 session.Errors.Clear();
             }
         }

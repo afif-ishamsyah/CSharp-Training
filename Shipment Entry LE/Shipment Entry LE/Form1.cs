@@ -20,8 +20,10 @@ namespace Shipment_Entry_LE
         private ACCPAC.Advantage.View csQry;
         private Session session;
         private DBLink mDBLinkCmpRW;
-        private string fullfilename;
-        private string rawfilename;
+        private string fullFileName;
+        private string rawFileName;
+        private string fileExtension;
+        private FileInfo fileInfo;
         private string username;
         private string password;
         private string database;
@@ -30,7 +32,7 @@ namespace Shipment_Entry_LE
         private string errorLocation;
         private string logErrorLocation;
         private TextFieldParser tfp;
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -43,6 +45,8 @@ namespace Shipment_Entry_LE
             session.Init("", "XX", "XX1000", "63A");
             session.Open(username, password, database, DateTime.Today, 0);
             mDBLinkCmpRW = session.OpenDBLink(DBLinkType.Company, DBLinkFlags.ReadWrite);
+
+            csQry = mDBLinkCmpRW.OpenView("CS0120");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,13 +67,19 @@ namespace Shipment_Entry_LE
 
                 foreach (string file in Directory.GetFiles(fileLocation))
                 {
-                    fullfilename = fileLocation + "/" + Path.GetFileName(file); //Get first file in the folder
-                    rawfilename = Path.GetFileName(file);
+                    fullFileName = fileLocation + "/" + Path.GetFileName(file); //Get first file in the folder
+                    rawFileName = Path.GetFileName(file);
+                    fileExtension = Path.GetExtension(file);
+                    fileInfo = new FileInfo(file);
 
-                    SendtoSage();
+                    //file must be a csv and not hidden
+                    if (!fileInfo.Attributes.HasFlag(FileAttributes.Hidden) && fileExtension == ".csv")
+                    {
+                        SendtoSage();
 
-                    //If Insert to Sage success, move file Completed Folder
-                    File.Move(fileLocation + "/" + rawfilename, successLocation + "/" + rawfilename);
+                        //If Insert to Sage success, move file Completed Folder
+                        File.Move(fileLocation + "/" + rawFileName, successLocation + "/" + rawFileName);
+                    }
                 }
             }
             catch (OleDbException) { Application.Exit(); } //Handle connection error in SendtoSage()
@@ -89,7 +99,7 @@ namespace Shipment_Entry_LE
             {
                 Connect();
 
-                tfp = new TextFieldParser(fullfilename);
+                tfp = new TextFieldParser(fullFileName);
                 tfp.Delimiters = new string[] { "," };
                 tfp.TextFieldType = FieldType.Delimited;
 
@@ -135,7 +145,16 @@ namespace Shipment_Entry_LE
                 OESHI1detail11.Compose(new[] { OESHI1detail9, null });
                 OESHI1detail12.Compose(new[] { OESHI1detail1 });
 
-                // Check if customer already exist
+                List<string> shipmentNumberList = new List<string>();
+                string StringSql = @"SELECT SHINUMBER FROM OESHIH";
+                csQry.Browse(StringSql, true);
+                csQry.InternalSet(256);
+
+                while (csQry.Fetch(false))
+                {
+                    shipmentNumberList.Add(csQry.Fields[0].Value.ToString());
+                }
+
                 tfp.ReadLine(); //skip header
                 int numrow = 1;
 
@@ -145,8 +164,27 @@ namespace Shipment_Entry_LE
 
                     if (numrow == 1)
                     {
+                        int insertedNumber = 1;
+                        string shipmentNumber = fields[0];
+                        string shipmentNumberTemp = fields[0];
+
+                        while (true)
+                        {                       
+                            if (shipmentNumberList.Contains(shipmentNumberTemp))
+                            {
+                                shipmentNumberTemp = shipmentNumber;
+                                shipmentNumberTemp = shipmentNumberTemp + insertedNumber;
+                                insertedNumber++;
+                            }
+                            else
+                            {
+                                shipmentNumber = shipmentNumberTemp;
+                                break;
+                            }
+                        }
+
                         OESHI1header.Init();
-                        OESHI1header.Fields.FieldByName("SHINUMBER").SetValue(fields[0], false);
+                        OESHI1header.Fields.FieldByName("SHINUMBER").SetValue(shipmentNumber, false);
                         OESHI1header.Fields.FieldByName("SHIDATE").SetValue(DateTime.ParseExact(fields[1].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture), false);
                         OESHI1header.Fields.FieldByName("CUSTOMER").SetValue(fields[2], false);
                         OESHI1header.Fields.FieldByName("DESC").SetValue(fields[3], false);
@@ -170,12 +208,12 @@ namespace Shipment_Entry_LE
                 tfp.Dispose();
                 tfp.Close();
             }
-            catch (System.Runtime.InteropServices.COMException e)
+            catch (System.Runtime.InteropServices.COMException)
             {
                 tfp.Dispose();
                 tfp.Close();
                 List<string> errors = new List<string>();
-                FileStream files = File.Create(logErrorLocation + "/" + rawfilename + ".txt");
+                FileStream files = File.Create(logErrorLocation + "/" + rawFileName + ".txt");
                 files.Close();
 
                 for (int k = 0; k <= session.Errors.Count - 1; k++)
@@ -186,8 +224,8 @@ namespace Shipment_Entry_LE
                 string errorMessage = string.Join(" ", errors);
 
 
-                FileSystem.WriteAllText(logErrorLocation + "/" + rawfilename + ".txt", errorMessage, true);
-                File.Move(fileLocation + "/" + rawfilename, errorLocation + "/" + rawfilename);
+                FileSystem.WriteAllText(logErrorLocation + "/" + rawFileName + ".txt", errorMessage, true);
+                File.Move(fileLocation + "/" + rawFileName, errorLocation + "/" + rawFileName);
                 session.Errors.Clear();
             }
         }

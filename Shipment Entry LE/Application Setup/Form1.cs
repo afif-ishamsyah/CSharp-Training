@@ -81,12 +81,12 @@ namespace Application_Setup
                     index = index + 2;
                 }
             }
-            catch (DirectoryNotFoundException ex)
+            catch (DirectoryNotFoundException)
             {
                 Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Interface Sage/Liputan Enam/OE Shipment/Save");
             }
-            catch (FileNotFoundException ex) { }
-            catch (IndexOutOfRangeException ex) { }
+            catch (FileNotFoundException) { }
+            catch (IndexOutOfRangeException) { }
         }
 
         private void ShipmentButton_Click(object sender, EventArgs e)
