@@ -5,7 +5,9 @@ using System.IO;
 using System.Windows.Forms;
 using ACCPAC.Advantage;
 using FileHelpers;
-using System.Linq;
+using System.Diagnostics;
+using System.Threading;
+using BrightIdeasSoftware;
 
 namespace Payment_Vendor
 {
@@ -13,16 +15,19 @@ namespace Payment_Vendor
     {
         FileHelperEngine<Data> engine = new FileHelperEngine<Data>();
         List<Data> data = new List<Data>();
-        private Dictionary<String, String> vendorlist = new Dictionary<String, String>();
+        private Dictionary<string, string> vendorlist = new Dictionary<string, string>();
         private ACCPAC.Advantage.View csQry;
         private Session session;
         private DBLink mDBLinkCmpRW;
 
-
-
         public PaymentVendorForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            BatchView.CellEditActivation = ObjectListView.CellEditActivateMode.SingleClick;
+            BatchView.UseFiltering = true;
+            BatchView.SelectColumnsOnRightClickBehaviour = ObjectListView.ColumnSelectBehaviour.None;
+            BatchView.ShowFilterMenuOnRightClick = false;
         }
 
         private void Connect()
@@ -53,8 +58,8 @@ namespace Payment_Vendor
 
                 while (csQry.Fetch(false))
                 {
-                    vendorlist.Add(csQry.Fields[0].Value.ToString(), csQry.Fields[1].Value.ToString());
-                    VendorComboBox.Items.Add(csQry.Fields[0].Value.ToString());
+                    vendorlist.Add(csQry.Fields[0].Value.ToString() + " - " + csQry.Fields[1].Value.ToString(), csQry.Fields[0].Value.ToString());
+                    VendorComboBox.Items.Add(csQry.Fields[0].Value.ToString() + " - " + csQry.Fields[1].Value.ToString());
                 }
 
                 session.Dispose();
@@ -72,7 +77,7 @@ namespace Payment_Vendor
 
         }
 
-        private void LoadList(String VendorID)
+        private void LoadList(string VendorID)
         {
             try
             {
@@ -80,30 +85,32 @@ namespace Payment_Vendor
                 data.Clear();
                 Connect();
 
-                String stringSQL = @"select a.BATCHID, b.MISCCODE, b.TEXTDESC, b.DATE, c.VALUE, d.VALUE, e.VALUE, b.BANKAMOUNT, f.VALUE
-                            from CBBCTL a
-                            join CBBTHD b ON a.BATCHID=b.BATCHID
-                            join APVENO c ON b.MISCCODE=c.VENDORID
-                            join APVENO d ON b.MISCCODE=d.VENDORID
-                            join APVENO e ON b.MISCCODE=e.VENDORID
-                            join APVENO f ON b.MISCCODE=f.VENDORID
-                            where c.OPTFIELD='BKNAME' and d.OPTFIELD='BKBENE' and e.OPTFIELD='BKACCT' and f.OPTFIELD='BKCODE'";
+                string stringSQL = @"SELECT a.BATCHID, b.MISCCODE, b.TEXTDESC, b.DATE, c.VALUE, d.VALUE, e.VALUE, b.BANKAMOUNT, f.VALUE, g.VENDNAME
+                            FROM CBBCTL a
+                            JOIN CBBTHD b ON a.BATCHID=b.BATCHID
+                            LEFT OUTER JOIN APVENO c ON b.MISCCODE=c.VENDORID
+                            LEFT OUTER JOIN APVENO d ON b.MISCCODE=d.VENDORID
+                            LEFT OUTER JOIN APVENO e ON b.MISCCODE=e.VENDORID
+                            LEFT OUTER JOIN APVENO f ON b.MISCCODE=f.VENDORID
+                            JOIN APVEN g ON b.MISCCODE=g.VENDORID
+                            WHERE a.STATUS='0' AND c.OPTFIELD='BKNAME' AND d.OPTFIELD='BKBENE' AND e.OPTFIELD='BKACCT' AND f.OPTFIELD='BKCODE'";
 
-                if(VendorID!="All Vendor")
+                
+                if (VendorID != "All Vendor")
                 {
-                    stringSQL = stringSQL + " and b.MISCCODE = '" + VendorID + "'";
+                    stringSQL = stringSQL + " AND b.MISCCODE = '" + VendorID + "'";
                 }
 
-                if (!String.IsNullOrEmpty(FromTextBox.Text))
+                if (!string.IsNullOrEmpty(FromTextBox.Text))
                 {
                     DateTime FromDate = DateTime.ParseExact(FromTextBox.Text, "dd/MM/yyyy", null);
-                    stringSQL = stringSQL + " and b.DATE >= '" + FromDate.ToString("yyyyMMdd") + "'";
+                    stringSQL = stringSQL + " AND b.DATE >= '" + FromDate.ToString("yyyyMMdd") + "'";
                 }
 
-                if (!String.IsNullOrEmpty(ToTextBox.Text))
+                if (!string.IsNullOrEmpty(ToTextBox.Text))
                 {
                     DateTime ToDate = DateTime.ParseExact(ToTextBox.Text, "dd/MM/yyyy", null);
-                    stringSQL = stringSQL + " and b.DATE <= '" + ToDate.ToString("yyyyMMdd") + "'";
+                    stringSQL = stringSQL + " AND b.DATE <= '" + ToDate.ToString("yyyyMMdd") + "'";
                 }
 
                 csQry.Browse(stringSQL, true);
@@ -130,63 +137,79 @@ namespace Payment_Vendor
         {
             DisableButton();
             data.Clear();
-            Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Payment Vendor");
-            String csvLocation = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Payment Vendor/Payment " + DateTime.Now.ToString("yyyy'-'MM'-'dd'_'HH'-'mm'-'ss") + ".csv";
+            Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Payment Vendor CSV Files");
+            string csvLocation = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Payment Vendor CSV Files/Payment " + DateTime.Now.ToString("yyyy'-'MM'-'dd'_'HH'-'mm'-'ss") + ".csv";
 
-            foreach (ListViewItem item in BatchView.Items)
+            if (BatchView.CheckedObjects.Count == 0)
             {
-                if(item.Checked == true)
+                MessageBox.Show("Please check at least one item", "Alert");
+                EnableButton();
+            }
+            else
+            {
+                foreach (PaymentColumn item in BatchView.CheckedObjects)
                 {
-                    data.Add(new Data()
+                    string desc = item.DESCRIPTION.ToString().Replace(',', ' ').Replace('.', ' ');
+                    if(desc.Length>35)
                     {
-                        BKNAME = item.SubItems[4].Text,
+                        desc = desc.Substring(0,35);
+                    }
+
+                    data.Add(new Data()
+                    { 
+                        BKNAME = item.BANKNAME,
                         BANKADDRESS = "",
                         BANKCITY = "",
-                        BANKCODE = item.SubItems[10].Text,
-                        BKBENE = item.SubItems[5].Text,
-                        BKACCT = item.SubItems[6].Text,
+                        BANKCODE = item.BANKCODE,
+                        BKBENE = item.BENEFICIARYNAME,
+                        BKACCT = item.ACCOUNTNUMBER,
                         CURRENCY = "IDR",
-                        AMOUNT = item.SubItems[7].Text.ToString().Replace('-', ' '),
-                        DESCRIPTION = item.SubItems[2].Text.ToString().Replace(',',' '),
+                        AMOUNT = item.AMOUNT.ToString().Replace('-', ' '),
+                        DESCRIPTION = desc,
                         DESCRIPTION2 = "",
                         EMAIL = "",
-                        TRANSACTIONTYPE = GetTransactionType(item.SubItems[4].Text),
+                        TRANSACTIONTYPE = GetTransactionType(item.BANKNAME),
                         RESIDENTSTATUS = "0",
                         CITIZENSTATUS = "0"
                     });
 
                 }
-            }
 
-            engine.WriteFile(csvLocation, data);
-            MessageBox.Show("CSV Generated", "Success");
-            EnableButton();
+                engine.WriteFile(csvLocation, data);
+                MessageBox.Show("CSV Generated", "Success");
+                EnableButton();
+                string path = csvLocation.Replace("/", "\\");
+                FileInfo fileInfo = new FileInfo(path);
+
+                //check if directory exists so that 'fileInfo.Directory' doesn't throw directory not found
+
+                ProcessStartInfo pi = new ProcessStartInfo("explorer.exe")
+                {
+                    WindowStyle = ProcessWindowStyle.Normal,
+                    UseShellExecute = true,
+                    FileName = fileInfo.Directory.FullName,
+                    Verb = "open"
+                };
+
+                Process.Start(pi);
+                Thread.Sleep(500);
+                SendKeys.SendWait(fileInfo.Name);
+            }
         }
 
         private void GenerateListView(ACCPAC.Advantage.View csQry)
         {
-            BatchView.Clear();
-            BatchView.View = System.Windows.Forms.View.Details;
-            BatchView.CheckBoxes = true;
-            BatchView.Columns.Add("BATCH ID", 75, HorizontalAlignment.Center);
-            BatchView.Columns.Add("VENDOR ID", 75, HorizontalAlignment.Center);
-            BatchView.Columns.Add("DESCRIPTION", 250, HorizontalAlignment.Center);
-            BatchView.Columns.Add("DATE", 100, HorizontalAlignment.Center);         
-            BatchView.Columns.Add("BANK NAME", 125, HorizontalAlignment.Center);
-            BatchView.Columns.Add("BENEFICIARY NAME", 150, HorizontalAlignment.Center);
-            BatchView.Columns.Add("ACCOUNT NUMBER", 110, HorizontalAlignment.Center);
-            BatchView.Columns.Add("AMOUNT", 100, HorizontalAlignment.Center);
-            BatchView.Columns.Add("CURRENCY", 75, HorizontalAlignment.Center);
-            BatchView.Columns.Add("TYPE", 75, HorizontalAlignment.Center);
-            BatchView.Columns.Add("BANK CODE", 75, HorizontalAlignment.Center);
-
-
+            BatchView.ClearObjects();
+            int rowNumber = 1;
             while (csQry.Fetch(false))
             {
-                var row = new ListViewItem(new string[] {
+                string description = csQry.Fields[2].Value.ToString().Substring(csQry.Fields[2].Value.ToString().LastIndexOf(';') + 1);
+                PaymentColumn rowObject = new PaymentColumn(
+                    rowNumber.ToString(),
                     csQry.Fields[0].Value.ToString(),
                     csQry.Fields[1].Value.ToString(),
-                    csQry.Fields[2].Value.ToString(),
+                    csQry.Fields[9].Value.ToString(),
+                    description,
                     DateTime.ParseExact(csQry.Fields[3].Value.ToString(), "yyyyMMdd", CultureInfo.InvariantCulture).ToString("dd/MM/yyyy"),
                     csQry.Fields[4].Value.ToString(),
                     csQry.Fields[5].Value.ToString(),
@@ -194,14 +217,30 @@ namespace Payment_Vendor
                     csQry.Fields[7].Value.ToString().Trim(new Char[] {'-'}),
                     "IDR",
                     GetTransactionType(csQry.Fields[4].Value.ToString()),
-                    csQry.Fields[8].Value.ToString()});
-                BatchView.Items.Add(row);
+                    csQry.Fields[8].Value.ToString());
+                BatchView.AddObject(rowObject);
+                rowNumber++;
             }
+            BatchView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            BatchView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+        }
+
+        private void HandleCellEditFinished(object sender, CellEditEventArgs e)
+        { 
+            Enabled = false;
+            if(e.Column == BANKNAME)
+            {
+                foreach(PaymentColumn row in BatchView.Objects)
+                {
+                    row.TYPE = GetTransactionType(row.BANKNAME);
+                }
+            }
+            Enabled = true;
         }
 
         private void VendorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            VendorNameTextBox.Text = vendorlist[VendorComboBox.Text];
+            VendorIDTextBox.Text = vendorlist[VendorComboBox.Text];
         }
 
         private void FromCalendar_DateChanged(object sender, DateRangeEventArgs e)
@@ -216,22 +255,17 @@ namespace Payment_Vendor
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            LoadList(VendorComboBox.SelectedItem.ToString());
+            LoadList(VendorIDTextBox.Text);
         }
 
         private void DisableButton()
         {
-            FromCalendar.Enabled = false;
-            ToCalendar.Enabled = false;
-            SearchButton.Enabled = false;
-            CsvButton.Enabled = false;
+            this.Enabled = false;
         }
 
         private void EnableButton()
         {
-            FromCalendar.Enabled = true;
-            ToCalendar.Enabled = true;
-            SearchButton.Enabled = true;
+            this.Enabled = true;
             CsvButton.Enabled = true;
         }
 
@@ -245,7 +279,7 @@ namespace Payment_Vendor
             ToTextBox.Clear();
         }
 
-        private String GetTransactionType(string bank)
+        private string GetTransactionType(string bank)
         {
             if (bank.IndexOf("permata", StringComparison.OrdinalIgnoreCase) >= 0)
             {
@@ -257,20 +291,46 @@ namespace Payment_Vendor
             }
         }
 
-        private void SelectAllButton_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in BatchView.Items)
-            {
-                item.Checked = true;
-            }
+            Application.Exit();
         }
 
-        private void UnselectAllButton_Click(object sender, EventArgs e)
+        private void CheckAllButton_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in BatchView.Items)
-            {
-                item.Checked = false;
-            }
+            BatchView.CheckAll();
+        }
+
+        private void UncheckAllButton_Click(object sender, EventArgs e)
+        {
+            BatchView.UncheckAll();
+        }
+
+        private void CheckFilteredButton_Click(object sender, EventArgs e)
+        {
+            BatchView.CheckObjects(BatchView.FilteredObjects);
+        }
+
+        private void UncheckFIlteredButton_Click(object sender, EventArgs e)
+        {
+            BatchView.UncheckObjects(BatchView.FilteredObjects);
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            BatchView.ModelFilter = TextMatchFilter.Contains(BatchView, SearchTextBox.Text);
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            SearchTextBox.Clear();
+        }
+
+        private void BatchView_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(BatchView.FocusedItem.Index.ToString());
+            //int i = BatchView.FocusedItem.Index;
+            //MessageBox.Show(BatchView.FocusedItem.SubItems[7].Text);
         }
     }
 }

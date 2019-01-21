@@ -164,40 +164,41 @@ namespace Shipment_Entry_LE
 
                     if (numrow == 1)
                     {
-                        int insertedNumber = 1;
-                        string shipmentNumber = fields[0];
-                        string shipmentNumberTemp = fields[0];
+                        //string sequenceLocation = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Interface Sage/Liputan Enam/OE Shipment/Save/Sequence.txt";
+                        string sequenceLocation = "E:/Sage/Interface/KAPAN LAGI DOT COM/Module/Order Entry/Sequence.txt";
+                        string[] lines = File.ReadAllLines(sequenceLocation);
+                        int sequenceNumber = int.Parse(lines[0]);
+                        string shipmentNumber = "SH" + sequenceNumber.ToString("00000000");
 
-                        while (true)
-                        {                       
-                            if (shipmentNumberList.Contains(shipmentNumberTemp))
-                            {
-                                shipmentNumberTemp = shipmentNumber;
-                                shipmentNumberTemp = shipmentNumberTemp + insertedNumber;
-                                insertedNumber++;
-                            }
-                            else
-                            {
-                                shipmentNumber = shipmentNumberTemp;
-                                break;
-                            }
-                        }
+                        sequenceNumber++;
+                        File.WriteAllText(sequenceLocation, sequenceNumber.ToString());
 
                         OESHI1header.Init();
                         OESHI1header.Fields.FieldByName("SHINUMBER").SetValue(shipmentNumber, false);
                         OESHI1header.Fields.FieldByName("SHIDATE").SetValue(DateTime.ParseExact(fields[1].ToString(), "yyyyMMdd", CultureInfo.InvariantCulture), false);
                         OESHI1header.Fields.FieldByName("CUSTOMER").SetValue(fields[2], false);
+                        OESHI1header.Fields.FieldByName("PONUMBER").SetValue(fields[0], false);
                         OESHI1header.Fields.FieldByName("DESC").SetValue(fields[3], false);
                         OESHI1header.Fields.FieldByName("TCLASS1").SetValue("3", false);
                     }
+
+                    double qty = 1;
+                    double amount = double.Parse(fields[6].ToString());
+
+                    if (amount < 0)
+                    {
+                        amount = Math.Abs(amount);
+                        qty = -1;
+                    }
+
                     OESHI1detail1.RecordCreate(ViewRecordCreate.NoInsert);
                     OESHI1detail1.Fields.FieldByName("ITEM").SetValue(fields[4], false);
                     OESHI1detail1.Fields.FieldByName("CATEGORY").SetValue(fields[4], false);
                     OESHI1detail1.Fields.FieldByName("LOCATION").SetValue(fields[5], false);
-                    OESHI1detail1.Fields.FieldByName("PRIUNTPRC").SetValue(fields[6], false);
-                    OESHI1detail1.Fields.FieldByName("EXTSHIMISC").SetValue(fields[6], false);
+                    OESHI1detail1.Fields.FieldByName("PRIUNTPRC").SetValue(amount, false);
+                    OESHI1detail1.Fields.FieldByName("EXTSHIMISC").SetValue(amount, false);
                     OESHI1detail1.Fields.FieldByName("SHIUNIT").SetValue("UOM", false);
-                    OESHI1detail1.Fields.FieldByName("QTYSHIPPED").SetValue("1", false);
+                    OESHI1detail1.Fields.FieldByName("QTYSHIPPED").SetValue(qty, false);
                     OESHI1detail1.Fields.FieldByName("TCLASS1").SetValue("3", false);
                     OESHI1detail1.Insert();
                     numrow++;
@@ -234,7 +235,8 @@ namespace Shipment_Entry_LE
         {
             try
             {
-                string fileload = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Interface Sage/Liputan Enam/OE Shipment/Save/DatabaseSetupShipmentLE.txt";
+                //string fileload = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Interface Sage/Liputan Enam/OE Shipment/Save/DatabaseSetupShipmentLE.txt";
+                string fileload = "E:/Sage/Interface/KAPAN LAGI DOT COM/Module/Order Entry/DatabaseSetupShipmentLE.txt";
                 string[] lines;
                 string[] loadedLines = File.ReadAllLines(fileload);
 

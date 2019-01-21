@@ -13,7 +13,8 @@ namespace Application_Setup
 {
     public partial class ApplicationSetup : Form
     {
-        string fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Interface Sage/Liputan Enam/OE Shipment/Save/DatabaseSetupShipmentLE.txt";
+        //string fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Interface Sage/Liputan Enam/OE Shipment/Save/DatabaseSetupShipmentLE.txt";
+        string fileName = "E:/Sage/Interface/KAPAN LAGI DOT COM/Module/Order Entry/DatabaseSetupShipmentLE.txt";
         List<TextBox> TextBoxList = new List<TextBox>();
 
         public ApplicationSetup()
@@ -83,7 +84,8 @@ namespace Application_Setup
             }
             catch (DirectoryNotFoundException)
             {
-                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Interface Sage/Liputan Enam/OE Shipment/Save");
+                //Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Interface Sage/Liputan Enam/OE Shipment/Save");
+                Directory.CreateDirectory("E:/Sage/Interface/KAPAN LAGI DOT COM/Module/Order Entry");
             }
             catch (FileNotFoundException) { }
             catch (IndexOutOfRangeException) { }

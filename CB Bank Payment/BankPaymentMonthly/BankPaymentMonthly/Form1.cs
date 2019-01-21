@@ -52,7 +52,7 @@ namespace BankPaymentMonthly
             {
                 Connect();
 
-                string StringSql = @"SELECT b.BANKCODE, a.BANKNAME, b.FISCYR, b.PERIOD, b.DATE, 
+                /*string StringSql = @"SELECT b.BANKCODE, a.BANKNAME, b.FISCYR, b.PERIOD, b.DATE, 
                                             b.REFERENCE, b.TEXTDESC, b.BK2GLCURSR, b.BANKAMOUNT, 
                                             b.BATCHID, b.ENTRYNO, c.LEGALNAME
                                    FROM CBBANK a 
@@ -60,6 +60,17 @@ namespace BankPaymentMonthly
                                    INNER JOIN CSCOM c ON b.AUDTORG = c.ORGID
                                    WHERE  b.BANKAMOUNT < 0 AND
                                           MONTH(CONVERT(varchar, b.DATE,  103)) = MONTH(GETDATE()) AND
+                                          YEAR(CONVERT(varchar, b.DATE,  103)) = YEAR(GETDATE())
+                                   ORDER BY b.BANKCODE, b.DATE";*/
+
+                string StringSql = @"SELECT b.BANKCODE, a.BANKNAME, b.FISCYR, b.PERIOD, b.DATE, 
+                                            b.REFERENCE, b.TEXTDESC, b.BK2GLCURSR, b.BANKAMOUNT, 
+                                            b.BATCHID, b.ENTRYNO, c.LEGALNAME
+                                   FROM OESHIH 
+                                   INNER JOIN CBPJHD b ON a.BANKCODE = b.BANKCODE
+                                   INNER JOIN CSCOM c ON b.AUDTORG = c.ORGID
+                                   WHERE  b.BANKAMOUNT < 0 AND
+                                          MONTH(CONVERT(varchar, b.DATE,  103)) = 10 AND
                                           YEAR(CONVERT(varchar, b.DATE,  103)) = YEAR(GETDATE())
                                    ORDER BY b.BANKCODE, b.DATE";
 

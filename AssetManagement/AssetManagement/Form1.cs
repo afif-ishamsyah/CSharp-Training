@@ -123,13 +123,11 @@ namespace AssetManagement
                     if (numrow == 1)
                     {
                         AMACQASST1batch.Init();
-                        //AMACQASST1batch.RecordCreate(ViewRecordCreate.NoInsert);
+                        
                         AMACQASST1batch.Fields.FieldByName("BATDESC").SetValue(fields[0], false);
                         AMACQASST1batch.Fields.FieldByName("TXTYPE").SetValue(fields[1], false);                      
                         AMACQASST1batch.Update();
-                        //AMACQASST1batch.Insert();
-
-                        //AMACQASST1header.RecordCreate(ViewRecordCreate.Insert);
+                  
                         AMACQASST1header.Init();
                         AMACQASST1header.Fields.FieldByName("ACQENTRY").SetValue("1", false);
                         AMACQASST1header.Fields.FieldByName("FISCY").SetValue(fields[6], false);
@@ -138,6 +136,7 @@ namespace AssetManagement
                         AMACQASST1header.Fields.FieldByName("VENDOR").SetValue(fields[11], false);
                         AMACQASST1header.Fields.FieldByName("RATETYPE").SetValue("TX", false);
                         AMACQASST1header.Fields.FieldByName("AQUCODE").SetValue(fields[8], false);
+                        AMACQASST1header.Fields.FieldByName("APINVCNO").SetValue(fields[13], false);
                         AMACQASST1header.Fields.FieldByName("ACCTID").SetValue(fields[14], false);
                         AMACQASST1header.Fields.FieldByName("PONO").SetValue(fields[12], false);
                         AMACQASST1header.Fields.FieldByName("ENTRYDESC").SetValue(fields[3], false);
@@ -149,6 +148,9 @@ namespace AssetManagement
                     AMACQASST1detail1.Fields.FieldByName("BKVALUE").SetValue(fields[28], false);
                     AMACQASST1detail1.Fields.FieldByName("BKLTPERD").SetValue(fields[27], false);
                     AMACQASST1detail1.Fields.FieldByName("COSTCENT").SetValue(fields[21], false);
+                    AMACQASST1detail1.Fields.FieldByName("GROUP").SetValue(fields[17], false);
+                    AMACQASST1detail1.Fields.FieldByName("LOCATION").SetValue(fields[18], false);
+                    AMACQASST1detail1.Fields.FieldByName("CATEGORY").SetValue(fields[19], false);
                     AMACQASST1detail1.Fields.FieldByName("ACCSET").SetValue(fields[20], false);
                     AMACQASST1detail1.Fields.FieldByName("BKMETHOD").SetValue(fields[22], false);
                     AMACQASST1detail1.Fields.FieldByName("BKPERDID").SetValue(fields[23], false);
@@ -157,8 +159,6 @@ namespace AssetManagement
 
                     numrow++;
                 }
-                //AMACQHEAD2header.Read(false);
-                //AMACQHEAD2header.Update();
                 AMACQASST1header.Insert();
 
                 session.Dispose();

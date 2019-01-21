@@ -1,0 +1,16 @@
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\bin\Debug\Order Entry KLY.exe.config
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\bin\Debug\Order Entry KLY.exe
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\bin\Debug\Order Entry KLY.pdb
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\bin\Debug\ACCPAC.Advantage.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\bin\Debug\ACCPAC.Advantage.Server.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\bin\Debug\ACCPAC.Advantage.Server.RemotingManager.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\bin\Debug\ACCPAC.Advantage.Types.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\bin\Debug\stdole.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\obj\Debug\Order Entry KLY.csprojAssemblyReference.cache
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\obj\Debug\Order_Entry_KLY.OrderEntryKLY.resources
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\obj\Debug\Order_Entry_KLY.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\obj\Debug\Order Entry KLY.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\obj\Debug\Order Entry KLY.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\obj\Debug\Order Entry KLY.csproj.CopyComplete
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\obj\Debug\Order Entry KLY.exe
+C:\Users\SupportIT\Documents\C# Training\Order Entry KLY\Order Entry KLY\obj\Debug\Order Entry KLY.pdb

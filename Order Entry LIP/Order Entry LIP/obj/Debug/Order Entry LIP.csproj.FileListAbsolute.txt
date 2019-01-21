@@ -1,0 +1,16 @@
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\bin\Debug\Order Entry LIP.exe.config
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\bin\Debug\Order Entry LIP.exe
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\bin\Debug\Order Entry LIP.pdb
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\bin\Debug\ACCPAC.Advantage.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\bin\Debug\ACCPAC.Advantage.Server.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\bin\Debug\ACCPAC.Advantage.Server.RemotingManager.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\bin\Debug\ACCPAC.Advantage.Types.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\bin\Debug\stdole.dll
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\obj\Debug\Order Entry LIP.csprojAssemblyReference.cache
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\obj\Debug\Order_Entry_LE.OrderEntryLIP.resources
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\obj\Debug\Order_Entry_LIP.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\obj\Debug\Order Entry LIP.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\obj\Debug\Order Entry LIP.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\obj\Debug\Order Entry LIP.csproj.CopyComplete
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\obj\Debug\Order Entry LIP.exe
+C:\Users\SupportIT\Documents\C# Training\Order Entry LIP\Order Entry LIP\obj\Debug\Order Entry LIP.pdb

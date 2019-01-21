@@ -15,3 +15,6 @@ C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Relea
 C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Release\Payment Vendor.csproj.CopyComplete
 C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Release\Payment Vendor.exe
 C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Release\Payment Vendor.pdb
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Release\ObjectListView.dll
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\bin\Release\ObjectListView.xml
+C:\Users\SupportIT\Documents\C# Training\Payment Vendor\Payment Vendor\obj\Release\Payment Vendor.csprojAssemblyReference.cache

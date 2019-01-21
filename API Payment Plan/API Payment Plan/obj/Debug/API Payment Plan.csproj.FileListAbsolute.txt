@@ -1,0 +1,18 @@
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\API Payment Plan.exe.config
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\API Payment Plan.exe
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\API Payment Plan.pdb
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\ACCPAC.Advantage.dll
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\ACCPAC.Advantage.Server.dll
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\ACCPAC.Advantage.Server.RemotingManager.dll
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\ACCPAC.Advantage.Types.dll
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\stdole.dll
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\obj\Debug\API Payment Plan.csprojAssemblyReference.cache
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\obj\Debug\API_Payment_Plan.PaymentForm.resources
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\obj\Debug\API_Payment_Plan.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\obj\Debug\API Payment Plan.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\obj\Debug\API Payment Plan.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\obj\Debug\API Payment Plan.csproj.CopyComplete
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\obj\Debug\API Payment Plan.exe
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\obj\Debug\API Payment Plan.pdb
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\ObjectListView.dll
+C:\Users\SupportIT\Documents\C# Training\API Payment Plan\API Payment Plan\bin\Debug\ObjectListView.xml

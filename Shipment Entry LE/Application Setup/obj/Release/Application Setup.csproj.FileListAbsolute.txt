@@ -7,4 +7,3 @@ C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj
 C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application Setup.csproj.CoreCompileInputs.cache
 C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application Setup.exe
 C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application Setup.pdb
-C:\Users\SupportIT\Documents\C# Training\Shipment Entry LE\Application Setup\obj\Release\Application Setup.csprojAssemblyReference.cache

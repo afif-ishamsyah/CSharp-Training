@@ -233,6 +233,9 @@ namespace Vendor_Export_and_Import
                     APVENDOR1detail.Fields.FieldByName("OPTFIELD").SetValue("BKNAME", false);
                     APVENDOR1detail.Fields.FieldByName("VALIFTEXT").SetValue(xlWorkSheet.Cells[20, 2].value, false);
                     APVENDOR1detail.Insert();
+                    APVENDOR1detail.Fields.FieldByName("OPTFIELD").SetValue("BKCODE", false);
+                    APVENDOR1detail.Fields.FieldByName("VALIFTEXT").SetValue(xlWorkSheet.Cells[30, 2].value, false);
+                    APVENDOR1detail.Insert();
                     if (DatabaseBox.SelectedItem.ToString().Contains("CMWIDT"))
                     {
                         APVENDOR1detail.Fields.FieldByName("OPTFIELD").SetValue("FINANCENAME", false);

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application Setup", "Application Setup\Application Setup.csproj", "{B5D39A54-07E6-4B0D-BA71-99CA318EAFA3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Order Entry LIP Program", "Order Entry LIP Program\Order Entry LIP Program.vdproj", "{7EF6B547-A31C-4E4E-994C-CF287C8C0B49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order Entry LIP", "Order Entry LIP\Order Entry LIP.csproj", "{67B68B51-F2EE-4A2F-AFD3-95D8D3D534EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5D39A54-07E6-4B0D-BA71-99CA318EAFA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D39A54-07E6-4B0D-BA71-99CA318EAFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D39A54-07E6-4B0D-BA71-99CA318EAFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D39A54-07E6-4B0D-BA71-99CA318EAFA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EF6B547-A31C-4E4E-994C-CF287C8C0B49}.Debug|Any CPU.ActiveCfg = Debug
+		{7EF6B547-A31C-4E4E-994C-CF287C8C0B49}.Release|Any CPU.ActiveCfg = Release
+		{67B68B51-F2EE-4A2F-AFD3-95D8D3D534EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B68B51-F2EE-4A2F-AFD3-95D8D3D534EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B68B51-F2EE-4A2F-AFD3-95D8D3D534EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B68B51-F2EE-4A2F-AFD3-95D8D3D534EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A97AEEC1-9C35-4645-A00E-B46C4FDC1362}
+	EndGlobalSection
+EndGlobal
