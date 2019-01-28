@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A4A71036-8BBA-4A18-8291-DBB520FD81BA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>InvoiceReport</RootNamespace>
-    <AssemblyName>InvoiceReport</AssemblyName>
+    <RootNamespace>InvoiceReport_KMK</RootNamespace>
+    <AssemblyName>InvoiceReport_KMK</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -86,6 +86,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

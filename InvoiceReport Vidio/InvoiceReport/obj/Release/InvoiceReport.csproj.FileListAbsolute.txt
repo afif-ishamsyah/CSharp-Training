@@ -1,0 +1,34 @@
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Release\ACCPAC.Advantage.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Release\ACCPAC.Advantage.Server.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Release\ACCPAC.Advantage.Server.RemotingManager.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Release\ACCPAC.Advantage.Types.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Release\stdole.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Release\Interop.VBIDE.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Release\InvoiceReport.csproj.ResolveComReference.cache
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Release\InvoiceReport.InvoiceReport.resources
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Release\InvoiceReport.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Release\InvoiceReport.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Release\InvoiceReport.csproj.CopyComplete
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Release\InvoiceReport_KMK.exe.config
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Release\InvoiceReport_KMK.exe
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Release\InvoiceReport_KMK.pdb
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Release\InvoiceReport_KMK.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Release\InvoiceReport_KMK.exe
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Release\InvoiceReport_KMK.pdb
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\bin\Release\InvoiceReport_Vidio.exe.config
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\bin\Release\InvoiceReport_Vidio.exe
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\bin\Release\InvoiceReport_Vidio.pdb
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\bin\Release\ACCPAC.Advantage.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\bin\Release\ACCPAC.Advantage.Server.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\bin\Release\ACCPAC.Advantage.Server.RemotingManager.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\bin\Release\ACCPAC.Advantage.Types.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\bin\Release\stdole.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\obj\Release\Interop.VBIDE.dll
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\obj\Release\InvoiceReport.csproj.ResolveComReference.cache
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\obj\Release\InvoiceReport.InvoiceReport.resources
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\obj\Release\InvoiceReport_Vidio.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\obj\Release\InvoiceReport.csproj.GenerateResource.cache
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\obj\Release\InvoiceReport.csproj.CoreCompileInputs.cache
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\obj\Release\InvoiceReport.csproj.CopyComplete
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\obj\Release\InvoiceReport_Vidio.exe
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport Vidio\InvoiceReport\obj\Release\InvoiceReport_Vidio.pdb

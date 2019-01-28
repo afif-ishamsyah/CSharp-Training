@@ -1,6 +1,3 @@
-C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Debug\InvoiceReport.exe.config
-C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Debug\InvoiceReport.exe
-C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Debug\InvoiceReport.pdb
 C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Debug\ACCPAC.Advantage.dll
 C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Debug\ACCPAC.Advantage.Server.dll
 C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Debug\ACCPAC.Advantage.Server.RemotingManager.dll
@@ -10,9 +7,12 @@ C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\I
 C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\Interop.VBIDE.dll
 C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport.csproj.ResolveComReference.cache
 C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport.InvoiceReport.resources
-C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport.Properties.Resources.resources
 C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport.csproj.GenerateResource.cache
 C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport.csproj.CoreCompileInputs.cache
 C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport.csproj.CopyComplete
-C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport.exe
-C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport.pdb
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Debug\InvoiceReport_KMK.exe.config
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Debug\InvoiceReport_KMK.exe
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\bin\Debug\InvoiceReport_KMK.pdb
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport_KMK.Properties.Resources.resources
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport_KMK.exe
+C:\Users\SupportIT\Documents\C# Training\InvoiceReport\InvoiceReport\obj\Debug\InvoiceReport_KMK.pdb

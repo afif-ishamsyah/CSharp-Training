@@ -21,8 +21,12 @@ namespace InvoiceReport
         private const int Keysize = 256;
         private const int DerivationIterations = 1000;
         private string passphrase = "sage300accpac";
-        private string passfile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Invoice Report/Pass.txt";
-        private string recipientfile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Invoice Report/Recipient.txt";
+        //private string passfile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Invoice Report/Pass.txt";
+        private string passfile = "E:/Sage/Auto Generate Reports/KREATIF MEDIA KARYA PT/AP Aging/Config/Pass.txt";
+        //private string recipientfile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Invoice Report/Recipient.txt";
+        private string recipientfile = "E:/Sage/Auto Generate Reports/KREATIF MEDIA KARYA PT/AP Aging/Config/Recipient.txt";
+        //private string senderfile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Invoice Report/Sender.txt";
+        private string senderfile = "E:/Sage/Auto Generate Reports/KREATIF MEDIA KARYA PT/AP Aging/Config/Sender.txt";
 
         public struct Summary
         {
@@ -59,8 +63,9 @@ namespace InvoiceReport
                 csQry.Browse(StringSql, true);
                 csQry.InternalSet(256);
 
-                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Invoice Report");
-                string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Invoice Report/AP Aging KMKDAT " + DateTime.Now.ToString("yyyy'-'MM'-'dd'_'HH'-'mm'-'ss") + ".xlsx";
+                //Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Invoice Report");
+                //string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Invoice Report/AP Aging KMKDAT " + DateTime.Now.ToString("yyyy'-'MM'-'dd'_'HH'-'mm'-'ss") + ".xlsx";
+                string filePath = "E:/Sage/Auto Generate Reports/KREATIF MEDIA KARYA PT/AP Aging/Reports/AP Aging KMKDAT " + DateTime.Now.ToString("yyyy'-'MM'-'dd'_'HH'-'mm'-'ss") + ".xlsx";
                 Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
 
                 object misValue = System.Reflection.Missing.Value;
@@ -282,7 +287,8 @@ namespace InvoiceReport
 
                 xlWorkSheet2.Columns.AutoFit();
 
-                xlWorkBook.SaveAs(filePath);
+                xlWorkBook.Saved = true;
+                xlWorkBook.SaveCopyAs(filePath);
 
                 xlWorkBook.Close();
                 xlApp.Quit();
@@ -309,7 +315,7 @@ namespace InvoiceReport
             session = new Session();
 
             session.Init("", "XX", "XX1000", "63A");
-            session.Open("ADMIN", "ADMS4G3COM1", "KMKDAT", DateTime.Today, 0);
+            session.Open("ADM", "ADM123456", "KMKDAT", DateTime.Today, 0);
             mDBLinkCmpRW = session.OpenDBLink(DBLinkType.Company, DBLinkFlags.ReadWrite);
 
             csQry = mDBLinkCmpRW.OpenView("CS0120");
@@ -535,9 +541,10 @@ namespace InvoiceReport
         private void SendEmail(string fileLocation)
         {
             string line;
+            string sender = File.ReadLines(senderfile).First();
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-            mail.From = new MailAddress("afif.hantriono@kmkonline.co.id");
+            mail.From = new MailAddress(sender);
 
             StreamReader file = new StreamReader(recipientfile);
             while ((line = file.ReadLine()) != null)
@@ -559,7 +566,7 @@ namespace InvoiceReport
 
             SmtpServer.Port = 587;
             SmtpServer.UseDefaultCredentials = false;
-            SmtpServer.Credentials = new NetworkCredential("afif.hantriono@kmkonline.co.id", Decrypt(pass,passphrase));
+            SmtpServer.Credentials = new NetworkCredential(sender, Decrypt(pass,passphrase));
             SmtpServer.EnableSsl = true;
 
             SmtpServer.Send(mail);
