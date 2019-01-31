@@ -44,7 +44,7 @@ namespace Vendor_Export_and_Import
             session = new Session();
 
             session.Init("", "XX", "XX1000", "63A");
-            session.Open("ADMIN", "ADMS4G3COM1", DatabaseBox.SelectedItem.ToString(), DateTime.Today, 0);
+            session.Open("ADM", "ADM123456", DatabaseBox.SelectedItem.ToString(), DateTime.Today, 0);
             mDBLinkCmpRW = session.OpenDBLink(DBLinkType.Company, DBLinkFlags.ReadWrite);
 
             csQry = mDBLinkCmpRW.OpenView("CS0120");

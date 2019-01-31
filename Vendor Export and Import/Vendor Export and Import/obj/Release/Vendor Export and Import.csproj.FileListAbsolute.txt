@@ -15,3 +15,4 @@ C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export 
 C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Release\Vendor Export and Import.csproj.CopyComplete
 C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Release\Vendor Export and Import.exe
 C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Release\Vendor Export and Import.pdb
+C:\Users\SupportIT\Documents\C# Training\Vendor Export and Import\Vendor Export and Import\obj\Release\Vendor Export and Import.csprojAssemblyReference.cache
